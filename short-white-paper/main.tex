@@ -1,0 +1,57 @@
+% rubber : module pdftex
+
+\documentclass{llncs}
+
+% LaTeX font stuff
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+% nice bibliography package
+\usepackage[sort&compress,square,numbers]{natbib}
+
+% Use "listings" package for rendering C++ code
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\scriptsize\ttfamily,% basic font setting
+    framextopmargin=50pt
+}
+
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{xspace}
+
+\begin{document}
+
+% Title
+\title{Quantstamp: A decentralized security platform for smart contracts}
+\author{Steven Stewart, Richard Ma}
+\institute{Quantstamp Techologies Inc.}
+\maketitle
+
+% INTRODUCTION
+\section{Abstract}
+The Quantstamp (QSP) platform is an automated service, based on blockchain technology, for performing security audits of smart contracts. QSP maintains a history of security reports, which are generated whenever an audit of a smart contract is requested. The Quantstamp network (QN) stores the reports in a decentralized database, and is composed of verifier nodes that perform security audits. The QSP token is the key to accessing the software services offered by Quantstamp.
+
+The value and utility of QSP is best understood by example. Suppose that a developer plans to deploy a smart contract written in Solidity on Ethereum. There is substantial risk when writing code that accesses a monetary system, and the developer must be careful to ensure that no funds are lost due to vulnerabilities. In order to minimize risk, the developer decides to submit his code for a security audit. He calls the auditing function directly from his wallet by sending a small amount of QSP token to the QN network. Then the QN broadcasts the audit request, and verifiers immediately perform a set of security checks. Upon consensus, the network publishes a security report that summarizes the results. The report classifies issues based on a severity system from 1-10; a 1 is a minor warning, a 10 is a major security vulnerability. 
+
+When requesting an audit, the developer can choose either a public or private security report. Private reports are encrypted using the public key of the smart contract, and they can be decrypted by the owner/developer.
+
+The developer and the public can access a web portal to review any security report. By using seamless cryptographic hashing, security reports viewed by the public exactly match the audited source code to prevent manipulation of report results. 
+
+In general, the developer can perform security audits on a local machine prior to issuing a public audit, but may find that the computational overhead is too high. Verifier nodes are likely to have greater computational capacity in terms of memory and processing cores than the average developer's machine. Once the code is ready for deployment, the developer is ultimately motivated to produce a public security report in order to give users the reassurance that a decentralized security audit was performed.
+
+When a security report identifies issues found within a smart contract, the developer has the option of publicly annotating the report with feedback. This gives developers the power to indicate false positives in the report, and the community can validate that the developer is correct.
+
+Although it is not possible to 100\% guarantee that source code is flawless, the Quantstamp team will continuously engage in research and development, making regular improvements to the security library. When there are new releases, developers can re-audit their smart contracts, demonstrating their commitment to securing code and increasing public confidence.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+\bibliographystyle{splncs03}
+\bibliography{bib/strings-long,bib/strings-short,bib/derek,gpu,bib/proceedings}
+
+
+\end{document}
