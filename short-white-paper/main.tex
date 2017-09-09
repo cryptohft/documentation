@@ -4,12 +4,15 @@
 \usepackage{geometry}
 \geometry{
   letterpaper,     % or a4paper
-  textwidth=13.2cm,  % llncs has 12.2cm
-  textheight=20.3cm, % llncs has 19.3cm
+  textwidth=15.2cm,  % llncs has 12.2cm
+  textheight=22.3cm, % llncs has 19.3cm
   heightrounded,   % integer number of lines
   hratio=1:1,      % horizontally centered
   vratio=2:3,      % not vertically centered
 }
+
+\usepackage{graphicx}
+\usepackage{makecell}
 
 \begin{document}
 
@@ -38,5 +41,47 @@ A developer can perform security audits on a local machine prior to issuing a pu
 When a security report identifies issues found within a smart contract, the developer has the option of publicly annotating the report with feedback. This gives developers the power to indicate false-positives in the report, and the community can validate the annotations.
 
 Although it is not possible to 100\% guarantee that source code is flawless, the Quantstamp team will continuously engage in research and development, making regular improvements to the security library. When there are new releases, developers can re-audit their smart contracts, demonstrating their commitment to securing code and increasing public confidence.
+
+
+\section{Token distribution}
+
+\subsection{The Quantstamp Presale (100\% bonus)}
+
+\begin{table}[]
+\begin{tabular}{| l | l |}
+\hline
+\makecell[lt]{\textbf{Presale Token}\\QSPG} & \makecell[lt]{\textbf{Type}\\Ethereum ERC20 Token} \\ \hline
+\makecell[lt]{\textbf{Price (Includes 100\% bonus)}\\10,000 QSPG = 1 ETH} & \makecell[lt]{\textbf{Issuance} \\QSPG contributions are pre-allocated at the\\start of the main ICO with bonus included} \\ \hline
+\makecell[lt]{\textbf{Sale Period}\\Currently taking pre-orders\\First token sale date TBD following full \\regulatory compliance
+} & \makecell[lt]{\textbf{Early Backer Reward}\\Bonus starts at 100\% in the first 48 hours,\\then linearly decreases to 50\% over one\\month} \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent The github code for our token distribution: https://github.com/quantstamp/token-distribution
+
+\subsection{Main Token Sale Terms}
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.45]{token_sale.png}
+\end{figure}
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|}
+\hline
+Role of Token           & Enable security audits on the Quantstamp Network       \\ \hline
+Symbol                  & QSP                                                    \\ \hline
+Supply                  & 1,000,000,000 QSP                                      \\ \hline
+For Sale                & 510,000,000 QSP                                        \\ \hline
+Emission Rate           & No new tokens will be created                          \\ \hline
+Price                   & 5,000 QSP = 1 ETH                                      \\ \hline
+Accepted Currencies     & ETH                                                    \\ \hline
+Sale Period             & November 2017                                          \\ \hline
+Token Distribution Date & 7 days following security audits at the end of the ICO \\ \hline
+Minimum Goal            & 5000 ETH                                               \\ \hline
+Maximum Goal            & 102,000 ETH                                            \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent Additional information regarding the token distribution is in the FAQ section of our white-paper.
 
 \end{document}
